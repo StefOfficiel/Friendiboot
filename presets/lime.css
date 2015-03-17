@@ -1,0 +1,34 @@
+.navbar-header, .navbar-collapse, .navbar-nav {
+  background-color: #ccde00;
+  background-image: -moz-linear-gradient(top, #e8fc0d, #ccde00);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e8fc0d), to(#ccde00));
+  background-image: -webkit-linear-gradient(top, #e8fc0d, #ccde00);
+  background-image: -o-linear-gradient(top, #e8fc0d, #ccde00);
+  background-image: linear-gradient(to bottom, #e8fc0d, #ccde00);
+  background-repeat: repeat-x;
+  border-color: #252525;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe387ae', endColorstr='#ffccde00', GradientType=0);
+}
+#jot #jot-tools li.perms a.lock {
+    border: #ccde00;
+}
+nav .nav-notify {
+    background-color: #962555;
+}
+#jot #jot-tools, #jot #jot-tools, #jot #jot-tools li, #jot #jot-tools li a, #jot #jot-tools li.perms a.lock {
+    background-color: #ccde00;
+    color: #151515;
+    border-bottom: #ccde00;
+}
+a:link, a:visited, .fakelink {
+    color: #de7900;
+}
+a:active, a:hover, .fakelink:hover {
+    color: #444;
+}
+.tabs a:link, .tabs a:visited {
+    color: #de7900;
+}
+.tab .active {
+    border-bottom: #444;
+}

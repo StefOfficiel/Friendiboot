@@ -1,0 +1,46 @@
+body, #jot #jot-tools {
+    background-color: #1b1a20;
+    color: #615f6f;
+}
+#jot #jot-tools, #jot #jot-tools li {
+    border-bottom: #1b1a20;
+}
+.tread-wrapper, .widget, .fc-content {
+    background-color: #615f6f;
+    color: #14131f;
+}
+.widget {
+    border-radius: 5px;
+    padding: 2px;
+}
+.comment-edit-text-ful, .mceContentBody  {
+    background-color: #413f4b;
+    color: #615f6f;
+}
+.tread-wrapper a:link, .treat-wrapper a:visited, .fakelink, .widget a:link, .widget a:visited, .widget .fakelink {
+    color: #0e0c1c;
+}
+.treat-wrapper a:active {
+    color: #586088;
+}
+a:link, a:visited, .fakelink {
+    color: #615f6f;
+}
+a:active {
+    color: #615f6f;
+}
+.tabs a:link, .tabs a:visited {
+    color: #615f6f;
+}
+.tab .active {
+    border-bottom: #615f6f;
+}
+.tag a:link, .tag a:active, .tag a:hover .tag a:visited {
+    color: #fff;
+}
+.navbar-header, .navbar-collapse, .navbar-nav {
+    background-color: #18121e;
+}
+.fn.label { 
+    color: #999;
+}

@@ -1,0 +1,353 @@
+@media (min-width: 768px) {
+	body {
+		padding-top: 70px;
+		font-size: 14px;
+		font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;;
+		margin: 0;
+	}
+
+	aside, section, .profile_side {
+		background:#FFF;
+		border-right:2px solid #dcdee3;
+		border-bottom:2px solid #dcdee3;
+		border-left:1px solid #dcdee3;
+		border-top:1px solid #dcdee3;
+		padding:15px;
+	}
+	
+	.wall-item-item {
+		border-right:2px solid #dcdee3;
+		border-bottom:2px solid #dcdee3;
+		border-left:1px solid #dcdee3;
+		border-top:1px solid #dcdee3;
+	}
+}
+@media (max-width: 767px) {
+	body {
+		padding-top: 60px;
+		font-size: 14px;
+		font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;;
+		margin: 0;
+		background:#FFF;
+	}
+
+	aside, section {
+		background:#FFF;
+		border:1px solid #dcdee3;
+		padding:1px;
+		margin: 0px -30px 0px -30px;
+	}
+	
+	.contact-info span img, .contact-info-xs span img , .shared_content img {
+		width:100%;
+	}
+	.shared_header img {
+		max-width:32px;
+		max-height:32px;
+	}
+}
+
+*::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
+.smiley {
+	max-width: 16px;
+	max-height: 16px;
+}
+
+.mail-list-outside-wrapper h3 strong {
+	color:#F33;
+}
+
+.media-notif {
+	padding: 7px 27px 7px 8px;
+	border-bottom:#333 1px solid;
+}
+
+.nav-notify-badge, .nav-mail-badge {
+	display: none;
+	position: absolute;
+	background-color: #F33;
+	color:#FFF;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 3px 4px 3px 4px;
+	top: 4px;
+	margin-left: 15px;
+	min-width: 15px;
+	text-align: right;
+}
+
+.notify-unseen {
+	background-color:#DBDBDB;;
+}
+
+#nav-notifications-menu {
+	max-width: 430px;
+	min-width: 430px;
+	max-height: 390px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	color: rgb(0, 0, 0);
+}
+
+@media (min-width: 768px) {
+	#nav-notifications-menu {
+		left: 400px;
+	}
+}
+
+/* Vcard */
+.border_vcard {
+	border:solid 1px #000;
+	padding:5px;
+}
+.vcard {
+	border:solid 8px #777777;
+}
+
+.top_vcard, .bottom_vcard {
+	padding:5px;
+}
+.bottom_vcard dd {
+	padding-left:15px;
+}
+.bottom_vcard dl {
+	padding-left:3px;
+}
+
+/* Wall item */
+.wall-item-item {
+	background: #e9eaed;
+	padding:7px 12px 7px 12px;
+	border:1px solid;
+	border-color:#e5e6e9 #dfe0e4 #d0d1d5;
+	margin:0px 0px 20px 0px;
+}
+.children {
+	margin-top:-20px;
+	padding-left:5px;
+	border-left:4px #D8D7CF solid;
+}
+.wall-item-item	.contact-photo {
+	padding:0px 20px 20px 0px;
+	float:left;
+}
+
+.wall-item-item	.contact-photo-xs {
+	padding:0px 5px 5px 0px;
+	float:left;
+}
+
+.wall-item-item	.contact-photo img {
+	width:100%;
+	height:100%;
+	min-width:80px;
+	min-height:80px;
+	max-width:80px;
+	max-height:80px;
+}
+
+.wall-item-item	.contact-photo-xs img {
+	width:100%;
+	height:100%;
+	min-width:40px;
+	min-height:40px;
+	max-width:40px;
+	max-height:40px;
+}
+
+.wall-item-item	.contact-info, .wall-item-item .contact-info-xs {
+	overflow:hidden;
+}
+.wall-item-item	.contact-info	.item-add-comment {
+	border-top:#FFF 1px solid;
+	padding:7px 12px 7px 12px;
+}
+.my-comment-photo{
+	width:50px;
+	height:50px;
+	min-width:50px;
+	min-height:50px;
+	max-width:50px;
+	max-height:50px;
+}
+.comment-edit-photo {
+	float:left;
+	width:60px;
+	min-width:60px;
+	max-width:60px;
+}
+.comment-edit-text-empty,
+.comment-edit-text-full {
+	overflow:hidden;
+	width:90%;
+	max-width:1050px;
+	height:50px;
+	min-height:50px;
+	max-height:500px;
+}
+/* ./Wall item */
+
+#scroll{
+	position: fixed;	 
+	bottom: 30px;	
+	background: transparent url('./img/arrow.png') no-repeat left top; 
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+	display:none;
+}
+
+.attachment-image {
+	margin-left: auto;
+		margin-right: auto;
+	width:100%;
+	border:1px #333 solid;
+	margin-bottom:15px;
+}
+
+.type-link {
+	text-wrap:normal;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+img.gallery {
+	padding:0px;
+	margin:2px;
+	float:left;
+}
+
+span.rollover {
+	opacity: 1;
+	-o-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-webkit-transition: -webkit-transform 1s;
+	background:url('./img/loupe.png') center center no-repeat #000;
+	cursor: pointer;
+	height: 100px;
+	width: 100px;
+	left:7px;
+	top:3px;
+	position: absolute;
+	z-index: 10;
+	opacity: 0;
+}
+
+span.rollover:hover {
+	opacity: .4;
+	-o-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-webkit-transition: -webkit-transform 1s;
+	-webkit-box-shadow: 0px 0px 4px #000;
+	-moz-box-shadow: 0px 0px 4px #000;
+	box-shadow: 0px 0px 4px #000;
+}
+
+/* Profile Box */
+.Xcontainer {
+	width:100%;
+	max-width: 350px;
+}
+
+.Xprofile-box {
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+	position: relative;
+	overflow: hidden;
+}
+
+.Xprofile-box .Xprofile-picture {
+	position: absolute;
+	top: 240px;
+	left: 50%;
+	margin-left: -55px;
+}
+.Xprofile-box .Xprofile-picture img {
+	border: 5px solid #fff;
+	border-radius: 100%;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+	width: 100px;
+	height: 100px;
+}
+
+.Xprofile-box .Xprofile-picture2 {
+	position: absolute;
+	top: 190px;
+	left: 50%;
+	margin-left: -55px;
+}
+.Xprofile-box .Xprofile-picture2 img {
+	border: 5px solid #fff;
+	border-radius: 100%;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+	width: 100px;
+	height: 100px;
+}
+
+.Xprofile-cover-image {
+	height: 300px;
+	overflow: hidden;
+}
+.Xprofile-cover-image img {
+	width: 100%;
+}
+
+.Xprofile-content {
+	padding: 40px 20px;
+	text-align: center;
+}
+.Xprofile-content h1 {
+	font-weight: normal;
+	margin-bottom: 0.2em;
+}
+.Xprofile-content p {
+	font-size: 1.1em;
+	line-height: 1.6;
+	color: #696969;
+}
+.Xprofile-content .socials a {
+	color: #d2d2d2;
+	margin: 0 15px;
+	font-size: 1.6em;
+	transform: translateY(4px);
+}
+.Xprofile-content .socials a:hover {
+	color: #aaa;
+	transform: translateY(0);
+}
+
+/* Custom Bootstrap navbar / menu */
+@media screen and (max-width: 767px) {
+	.navbar-header{
+		text-align:center;
+	}
+ 
+	.navbar-brand{
+		display:inline-block;
+		float:none;
+	}
+ 
+	.navbar-toggle{
+		float:none;
+		color:#FFF;
+	}
+}
