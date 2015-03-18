@@ -3,7 +3,7 @@
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#sidebar" aria-expanded="false" aria-controls="navbar">
+			<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas" data-target="#myNavmenu"  data-canvas="body">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -105,9 +105,9 @@
 			{{/if}}
 		</div>
 		
-		<div id="sidebar" class="collapse">
+		<div id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas">
 			<div class="nav-container">
-				<div class="list-group" style="overflow-y:scroll; max-height:200px;">
+				<div class="list-group">
 					<li class="list-group-item"><img src="{{$userinfo.icon}}" alt="{{$userinfo.name}}" style="max-width:15px; max-height:15px; min-width:15px; min-height:15px; width:15px; height:15px;"> {{$userinfo.name}}</li>
 					{{foreach $nav.usermenu as $usermenu}}
 					<a class="{{$usermenu.2}} list-group-item" href="{{$usermenu.0}}" title="{{$usermenu.3}}">{{$usermenu.1}}</a>
