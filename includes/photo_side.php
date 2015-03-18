@@ -1,7 +1,6 @@
 <?php
 $SERVER_ReqURI = substr($_SERVER['REQUEST_URI'], 1);
-$delslash = "/";
-$SERVER_ReqURI = str_replace($delslash, "", $SERVER_ReqURI);
+$SERVER_ReqURI = str_replace("/", "", $SERVER_ReqURI);
 $SERVER_ReqURI = substr($SERVER_ReqURI, 0, strpos($SERVER_ReqURI, "?"));
 
 if($SERVER_ReqURI == "network")
