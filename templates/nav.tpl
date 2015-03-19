@@ -3,15 +3,17 @@
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas" data-target="#myNavmenu"  data-canvas="body">
+			<button type="button" class="navbar-toggle collapsed pull-right" data-toggle="offcanvas" data-target="#myNavmenu"  data-canvas="body">
 				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
+				<i class="fa fa-ellipsis-v"></i>
 			</button>
 			<button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 				<span class="sr-only">Toggle Search</span>
 				<i class="fa fa-search" style="color:#FFF;"></i>
+			</button>
+			<button type="button" class="navbar-toggle collapsed pull-left visible-sm visible-xs" data-toggle="offcanvas" data-target="#NavAside"  data-canvas="body">
+				<span class="sr-only">Toggle navigation</span>
+				<i class="fa fa-ellipsis-v"></i>
 			</button>
 			<a class="navbar-brand" href="#"><span class="hidden-xs"><img src="./images/friendica-32.png" width="25" height="25" /> Friendica</span><span class="visible-xs"><img src="./images/friendica-32.png" width="25" height="25" /></span></a>
 			{{if $nav.notifications}}
@@ -105,7 +107,7 @@
 			{{/if}}
 		</div>
 		
-		<div id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas">
+		<div id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-right offcanvas">
 			<div class="nav-container">
 				<div class="list-group">
 					<li class="list-group-item"><img src="{{$userinfo.icon}}" alt="{{$userinfo.name}}" style="max-width:15px; max-height:15px; min-width:15px; min-height:15px; width:15px; height:15px;"> {{$userinfo.name}}</li>

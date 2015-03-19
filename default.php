@@ -40,16 +40,17 @@ if(($_SERVER['REQUEST_URI'] != "/register") && ($_SERVER['REQUEST_URI'] != "/los
 		"; if(x($page,'right_aside')) echo $page['right_aside']; echo"
 		"; include('includes/photo_side.php'); echo"
 	</aside>
-
-	<div class=\"dropdown visible-sm visible-xs pull-left\">
-		<button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownAside\" data-toggle=\"dropdown\" aria-expanded=\"true\">
-			<i class=\"fa fa-caret-square-o-right\"></i>
-		</button>
-		<div class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"dropdownAside\" style=\"padding:3px 10px 2px 10px; width:200px; max-width:800px;\">
-			"; if(x($page,'aside')) echo $page['aside']; echo"
-			"; if(x($page,'right_aside')) echo $page['right_aside']; echo"
+	
+	<div id=\"NavAside\" class=\"navmenu navmenu-default navmenu-fixed-left offcanvas hidden-lg hidden-md\">
+		<div class=\"nav-container\">
+			<div class=\"list-group\">
+				"; include('includes/profile_side.php'); echo"
+				"; if(x($page,'aside')) echo $page['aside']; echo"
+				"; if(x($page,'right_aside')) echo $page['right_aside']; echo"
+				"; include('includes/photo_side.php'); echo"
+			</div>
 		</div>
-	</div>
+	</div><!--/.sidebar-offcanvas-->
 
 	<div class=\"col-lg-6 col-md-9 col-sm-12 col-xs-12\" id=\"content\">
 		<section>"; if(x($page,'content')) echo $page['content']; echo"</section>
