@@ -1,5 +1,7 @@
 # Friendiboot
 
+### Friendiboot is a Friendica's theme !
+
 This branch is the main branch. The latest versions are updated for the _dev_ branch all weeks.
 
 Cette branche est la branche principale.
