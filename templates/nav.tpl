@@ -16,30 +16,30 @@
 				<i class="fa fa-ellipsis-v"></i>
 			</button>
 			<a class="navbar-brand" href="#"><span class="hidden-xs"><img src="./images/friendica-32.png" width="25" height="25" /> Friendica</span><span class="visible-xs"><img src="./images/friendica-32.png" width="25" height="25" /></span></a>
+			
 			{{if $nav.notifications}}
-			<a href="{{$nav.notifications.0}}" rel="#nav-notifications-menu" title="{{$nav.notifications.1}}" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-globe fa-lg"></i><span id="notify-update" class="nav-notify-badge"></span></a>
-			<ul id="nav-notifications-menu" class="dropdown-menu" role="menu" style="display: none;">
-				<li>
-					<div align="center">
-						<a id="nav-notifications-mark-all" href="#" onclick="notifyMarkAll(); return false;" title="{{$nav.notifications.mark.1}}" class="btn-link" style="color:#000;">{{$nav.notifications.mark.1}}</a>
-					</div>
-					<br />
-				</li>
-				<li>
-					<div align="center">
-						<a href="{{$nav.notifications.all.0}}" title="{{$nav.notifications.all.1}}" class="btn-link" style="color:#000;">{{$nav.notifications.all.1}}</a>
-					</div>
-					<br />
-				</li>
-				<li>
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<p class="text-muted"><i>{{$emptynotifications}}</i></p>
+			<div class="navbar-brand dropdown">
+				<a href="{{$nav.notifications.0}}" rel="#nav-notifications-menu" title="{{$nav.notifications.1}}" class="btn-link" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+					<i class="fa fa-globe fa-lg"></i><span id="notify-update" class="nav-notify-badge"></span>
+				</a>
+				<ul id="nav-notifications-menu" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="display: none; left: -95px;">
+					<li role="presentation">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<a id="nav-notifications-mark-all" href="#" onclick="notifyMarkAll(); return false;" title="{{$nav.notifications.mark.1}}" class="btn-link" style="color:#000;">{{$nav.notifications.mark.1}}</a>
+							</div>
 						</div>
-					</div>
-				</li>
-			</ul>
+					</li>
+					<li role="presentation">
+						<a href="{{$nav.notifications.all.0}}" title="{{$nav.notifications.all.1}}" class="btn-link" style="color:#000;">{{$nav.notifications.all.1}}</a>
+					</li>
+					<li role="presentation">
+						<p class="text-muted"><i>{{$emptynotifications}}</i></p>
+					</li>
+				</ul>
+			</div>
 			{{/if}}
+			
 			{{if $nav.messages}}
 				<a href="{{$nav.messages.0}}" title="{{$nav.messages.1}}" class="navbar-brand"><i class="fa fa-envelope fa-lg"></i><span id="mail-update" class="nav-mail-badge"></span></a>
 			{{/if}}

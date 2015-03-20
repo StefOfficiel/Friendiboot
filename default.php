@@ -1,12 +1,12 @@
 <!DOCTYPE html >
 <html>
 <head>
-    <title><?php if(x($page,'title')) echo $page['title'] ?></title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <script>var baseurl="<?php echo $a->get_baseurl() ?>";</script>
-    <?php if(x($page,'htmlhead')) echo $page['htmlhead'] ?>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<title><?php if(x($page,'title')) echo $page['title'] ?></title>
+	<meta name="viewport" content="initial-scale=1.0">
+	<script>var baseurl="<?php echo $a->get_baseurl() ?>";</script>
+	<?php if(x($page,'htmlhead')) echo $page['htmlhead'] ?>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
 </head>
@@ -23,10 +23,10 @@ else
 <?php if($_SERVER['REQUEST_URI'] == "/"){header('Location: /login');} ?>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 <?php 
-    if(x($page,'nav')){
-	echo   str_replace("~config.sitename~",get_config('config','sitename'),
-	       str_replace("~system.banner~",get_config('system','banner'),
-	       $page['nav']
+	if(x($page,'nav')){
+	echo	str_replace("~config.sitename~",get_config('config','sitename'),
+			str_replace("~system.banner~",get_config('system','banner'),
+			$page['nav']
 	));};
 ?>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -77,7 +77,6 @@ else
 		$("#wrapper").toggleClass("toggled");
 	});
 </script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	$.fn.enterKey = function (fnc, mod) {
 		return this.each(function () {
@@ -95,22 +94,22 @@ else
 </script>
 <script>
 $(document).ready(function(){
-    //fade in/out based on scrollTop value
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 1000) {
-            $('#scroll').fadeIn();
-        } else {
-            $('#scroll').fadeOut();
-        }
-    });
+	//fade in/out based on scrollTop value
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 1000) {
+			$('#scroll').fadeIn();
+		} else {
+			$('#scroll').fadeOut();
+		}
+	});
  
-    // scroll body to 0px on click
-    $('#scroll').click(function () {
-        $('body,html').animate({
-            scrollTop: 0
-        }, 400);
-        return false;
-    });
+	// scroll body to 0px on click
+	$('#scroll').click(function () {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 400);
+		return false;
+	});
 });
 </script>
 <script>
@@ -129,6 +128,7 @@ $("nav").bind('nav-update', function(e,data)
 	}
 });
 </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
 </footer>
 </body>
