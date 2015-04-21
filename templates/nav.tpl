@@ -22,11 +22,13 @@
 				<a href="{{$nav.notifications.0}}" rel="#nav-notifications-menu" title="{{$nav.notifications.1}}" class="btn-link" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
 					<i class="fa fa-globe fa-lg"></i><span id="notify-update" class="nav-notify-badge"></span>
 				</a>
-				<ul id="nav-notifications-menu" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="display: none; left: -95px;">
+				<ul id="nav-notifications-menu" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="display: none;">
 					<li role="presentation">
 						<div class="panel panel-default">
 							<div class="panel-body">
-								<a id="nav-notifications-mark-all" href="#" onclick="notifyMarkAll(); return false;" title="{{$nav.notifications.mark.1}}" class="btn-link" style="color:#000;">{{$nav.notifications.mark.1}}</a>
+								<div id="nav-notifications-mark-all" style="height:30px; background:#FFF;">
+									<a href="#" onclick="notifyMarkAll(); return false;" title="{{$nav.notifications.mark.1}}" class="btn-link" style="color:#000; position:fixed; background:#FFF; padding:0 43px 2px 15px; z-index:9999; border-bottom:1px solid #000; margin-top:-5px;"><i class="fa fa-eye"></i> {{$nav.notifications.mark.1}}</a>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -141,7 +143,25 @@
 	</div><!-- /.container -->
 </nav><!-- /.navbar -->
 {{/if}}
+{{if $userinfo == ''}}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">
+				<span><img alt="Brand" src="./images/friendica-32.png" width="25" height="25"> Friendica</span>
+			</a>
+		</div>
+		<div class="hidden-sm hidden-xs">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="register" title="{{$register.title}}"><i class="fa fa-sign-in fa-fw"></i> {{$register.desc}}</a></li>
+				<li><a href="login" title="{{$login}}"><i class="fa fa-power-off fa-fw"></i> {{$login}}</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+{{/if}}
 
+{{if $nav.notifications}}
 <div id="nav-notifications-template" style="display:none;" rel="template">
 	<a href="{0}" style="color:#000;">
 		<div class="media media-notif {4}">
@@ -155,3 +175,4 @@
 		</div>
 	</a>
 </div>
+{{/if}}

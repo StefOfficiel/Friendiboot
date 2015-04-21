@@ -17,7 +17,7 @@
 					<a class="comment-edit-photo-link" href="{{$mylink}}" title="{{$mytitle}}"><img class="my-comment-photo" src="{{$myphoto}}" alt="{{$mytitle}}" title="{{$mytitle}}" /></a>
 				</div>
 				<div class="comment-edit-photo-end"></div>
-				<textarea id="comment-edit-text-{{$id}}" class="comment-edit-text-empty" name="body" onFocus="commentOpen(this,{{$id}});" onBlur="commentClose(this,{{$id}});" >{{$comment}}</textarea>
+				<textarea id="comment-edit-text-{{$id}}" class="comment-edit-text-empty" name="body" onFocus="commentOpen(this,{{$id}});" onBlur="commentClose(this,{{$id}});" placeholder="{{$comment}}"></textarea>
 				{{if $qcomment}}
 					<select id="qcomment-select-{{$id}}" name="qcomment-{{$id}}" class="qcomment" onchange="qCommentInsert(this,{{$id}});" >
 					<option value=""></option>
@@ -33,6 +33,43 @@
 					{{if $preview}}
 						<button class="btn btn-default" type="button" onclick="preview_comment({{$id}});" id="comment-edit-preview-link-{{$id}}"><i class="fa fa-eye"></i> {{$preview}}</button>
 					{{/if}}
+					<ul class="comment-edit-bb-{{$id}} nav nav-pills pull-right">
+						<li>
+							<a style="cursor: pointer;" title="{{$edimg}}" onclick="insertFormatting('{{$comment}}','img',{{$id}});">
+								<i class="fa fa-picture-o"></i>
+							</a>
+						</li>
+						<li>
+							<a class="icon bb-url" style="cursor: pointer;" title="{{$edurl}}" onclick="insertFormatting('{{$comment}}','url',{{$id}});">
+								<i class="fa fa-link"></i>
+							</a>
+						</li>
+						<li>
+							<a class="icon bb-video" style="cursor: pointer;" title="{{$edvideo}}" onclick="insertFormatting('{{$comment}}','video',{{$id}});">
+								<i class="fa fa-video-camera"></i>
+							</a>
+						</li>
+						<li>
+							<a class="icon underline" style="cursor: pointer;" title="{{$eduline}}" onclick="insertFormatting('{{$comment}}','u',{{$id}});">
+								<i class="fa fa-underline"></i>
+							</a>
+						</li>
+						<li>
+							<a class="icon italic" style="cursor: pointer;" title="{{$editalic}}" onclick="insertFormatting('{{$comment}}','i',{{$id}});">
+								<i class="fa fa-italic"></i>
+							</a>
+						</li>
+						<li>
+							<a class="icon bold" style="cursor: pointer;"  title="{{$edbold}}" onclick="insertFormatting('{{$comment}}','b',{{$id}});">
+								<i class="fa fa-bold"></i>
+							</a>
+						</li>
+						<li>
+							<a class="icon quote" style="cursor: pointer;" title="{{$edquote}}" onclick="insertFormatting('{{$comment}}','quote',{{$id}});">
+								<i class="fa fa-quote-left"></i>
+							</a>
+						</li>
+					</ul>
 					<div id="comment-edit-preview-{{$id}}" class="comment-edit-preview" style="display:none;"></div>
 				</div>
 

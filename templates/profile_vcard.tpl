@@ -55,13 +55,14 @@
 			<div id="profile-extra-links" class="Xprofile-content">
 				<ul>
 					{{if $connect}}
-						<li><a id="dfrn-request-link" href="dfrn_request/{{$profile.nickname}}">{{$connect}}</a></li>
+						<li><a id="dfrn-request-link" class="btn btn-labeled btn-primary col-lg-12 col-md-12 col-sm-12 col-xs-12" href="dfrn_request/{{$profile.nickname}}"><span class="btn-label pull-left"><i class="fa fa-check"></i></span><span class="btn">{{$connect}}</span></a></li>
 					{{/if}}
 					{{if $wallmessage}}
-						<li><a id="wallmessage-link" href="wallmessage/{{$profile.nickname}}">{{$wallmessage}}</a></li>
+						<li><a id="wallmessage-link" class="btn btn-labeled btn-info col-lg-12 col-md-12 col-sm-12 col-xs-12" href="wallmessage/{{$profile.nickname}}"><span class="btn-label pull-left"><i class="fa fa-envelope"></i></span><span class="btn">{{$wallmessage}}</span></a></li>
 					{{/if}}
 				</ul>
 			</div>
+			
 			<!-- TODO -->
 			{{if $profile.edit}}
 			<div class="list-group">

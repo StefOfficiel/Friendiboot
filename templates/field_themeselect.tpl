@@ -5,7 +5,7 @@
 	<div class="field select">
 		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<label for="id_{{$field.0}}">{{$field.1}}</label>
-			<select class="form-control input-sm" name="{{$field.0}}" id="id_{{$field.0}}" {{if $field.5}}onchange="previewTheme(this);"{{/if}} >
+			<select class="form-control input-sm selectpicker" name="{{$field.0}}" id="id_{{$field.0}}" {{if $field.5}}onchange="previewTheme(this);"{{/if}} >
 			{{foreach $field.4 as $opt=>$val}}
 				<option value="{{$opt}}" {{if $opt==$field.2}}selected="selected"{{/if}}>{{$val}}</option>
 			{{/foreach}}

@@ -73,5 +73,6 @@ if($SERVER_ReqURI == "network")
 	</div>
 	<hr />
 	';
+	echo get_birthdays();
 }
 ?>

@@ -6,10 +6,13 @@
  * Author: Stéphane PICHARD (http://diaspored.s-pichard.fr/profile/stefofficiel)
  */
 
+$friendiboot = $a->get_baseurl()."/view/theme/Friendiboot";
+
+global $friendiboot;
+
 function clean_init(&$a) {
     set_template_engine($a, 'smarty3');
 
 $a->page['htmlhead'] .= <<< EOT
 EOT;
 }
-

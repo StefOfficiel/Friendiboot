@@ -10,9 +10,9 @@
 			<p id="character-counter" class="grey jothidden text-info pull-left"></p>
 			<p id="profile-jot-desc" class="jothidden pull-right">&nbsp;</p>
 		</div>
-		<input name="title" id="jot-title" type="text" placeholder="{{$placeholdertitle}}" title="{{$placeholdertitle}}" value="{{$title}}" class="jothidden form-control" style="display:none;" />
+		<input name="title" id="jot-title" type="text" placeholder="{{$placeholdertitle}}" title="{{$placeholdertitle}}" value="{{$title}}" class="jothidden form-control" style="display:block;" />
 		{{if $placeholdercategory}}
-		<input name="category" id="jot-category" type="text" placeholder="{{$placeholdercategory}}" title="{{$placeholdercategory}}" value="{{$category}}" class="jothidden" style="display:none" />
+		<input name="category" id="jot-category" type="text" placeholder="{{$placeholdercategory}}" title="{{$placeholdercategory}}" value="{{$category}}" class="jothidden" style="display:none;" />
 		{{/if}}
 
 
@@ -40,8 +40,12 @@
 			<li class="perms"><a id="jot-perms-icon" href="#profile-jot-acl-wrapper" title="{{$permset}}" ><i class="fa fa-lock"></i></a></li>
 			<li><button  type="button" id="jot-preview-link" onclick="preview_post(); return false;" title="{{$preview}}" class="btn btn-warning"><i class="fa fa-eye fa-fw"></i> {{$preview}}</button></li>
 			<li><button type="submit" id="profile-jot-submit" name="submit" class="btn btn-primary"><i class="fa fa-slideshare fa-fw"></i> {{$share}}</button></li>
-			<li id="profile-rotator" class="loading" style="display: none"><img src="images/rotator.gif" alt="{{$wait}}" title="{{$wait}}"  /></li>
-			{{$jotplugins}}
+			<div id="profile-rotator-wrapper" style="display: {{$visitor}};" >
+				<img id="profile-rotator" src="images/rotator.gif" alt="{{$wait}}" title="{{$wait}}" style="display: none;" />
+			</div> 
+			<div id="profile-jot-plugin-wrapper">
+				{{$jotplugins}}
+			</div>
 		</ul>
 	</div>
 	

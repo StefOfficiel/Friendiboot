@@ -5,10 +5,11 @@
 	<meta name="viewport" content="initial-scale=1.0">
 	<script>var baseurl="<?php echo $a->get_baseurl() ?>";</script>
 	<?php if(x($page,'htmlhead')) echo $page['htmlhead'] ?>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="<?=$friendiboot?>/frameworks/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?=$friendiboot?>/frameworks/bootstrap/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+	<link rel="stylesheet" href="<?=$friendiboot?>/frameworks/jasny/css/jasny-bootstrap.min.css">
+	<link rel="stylesheet" href="<?=$friendiboot?>/frameworks/BootstrapSelect/css/bootstrap-select.min.css">
 </head>
 <?php
 if(($_SERVER['REQUEST_URI'] != "/register") && ($_SERVER['REQUEST_URI'] != "/lostpass") && ($_SERVER['REQUEST_URI'] != "/login"))
@@ -34,7 +35,7 @@ else
 if(($_SERVER['REQUEST_URI'] != "/register") && ($_SERVER['REQUEST_URI'] != "/lostpass") && ($_SERVER['REQUEST_URI'] != "/login"))
 {
 	echo"
-	<aside class=\"col-lg-offset-1 col-lg-3 col-md-3 hidden-sm hidden-xs\">
+	<aside class=\"col-lg-3 col-md-3 hidden-sm hidden-xs\">
 		"; include('includes/profile_side.php'); echo"
 		"; if(x($page,'aside')) echo $page['aside']; echo"
 		"; if(x($page,'right_aside')) echo $page['right_aside']; echo"
@@ -52,8 +53,8 @@ if(($_SERVER['REQUEST_URI'] != "/register") && ($_SERVER['REQUEST_URI'] != "/los
 		</div>
 	</div><!--/.sidebar-offcanvas-->
 
-	<div class=\"col-lg-6 col-md-9 col-sm-12 col-xs-12\" id=\"content\">
-		<section>"; if(x($page,'content')) echo $page['content']; echo"</section>
+	<div class=\"col-lg-9 col-md-9 col-sm-12 col-xs-12\" id=\"content\">
+		<section class=\"sectiontop\">"; if(x($page,'content')) echo $page['content']; echo"
 	</div>
 		";
 }
@@ -71,6 +72,7 @@ else
 <p id="scroll">
 </p>
 <footer>
+<span id="notifsound"></span>
 <script>
 	$("#menu-toggle").click(function(e) {
 		e.preventDefault();
@@ -121,6 +123,7 @@ $("nav").bind('nav-update', function(e,data)
 	if (count>0)
 	{
 		document.title = "("+count+") "+pagetitle;
+		/* document.getElementById('notifsound').innerHTML='<object type="audio/mpeg" width="0" height="0" data="<?=$friendiboot?>/audios/901.mp3"><param name="notif" value="<?=$friendiboot?>/audios/901.mp3" /><param name="autostart" value="true" /><param name="loop" value="false" /></object>'; */
 	}
 	else
 	{
@@ -128,7 +131,8 @@ $("nav").bind('nav-update', function(e,data)
 	}
 });
 </script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+<script src="<?=$friendiboot?>/frameworks/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?=$friendiboot?>/frameworks/jasny/js/jasny-bootstrap.min.js"></script>
+<script src="<?=$friendiboot?>/frameworks/BootstrapSelect/js/bootstrap-select.min.js"></script>
 </footer>
 </body>

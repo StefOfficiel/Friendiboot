@@ -1,3 +1,13 @@
+::selection{
+    background-color:#FEC01D;
+    color:black;
+}
+/* Firefox */
+::-moz-selection {
+    background-color:#FEC01D;
+    color:black;
+}
+
 @media (min-width: 768px) {
 	body {
 		padding-top: 70px;
@@ -6,16 +16,8 @@
 		margin: 0;
 	}
 
-	aside, section, .profile_side {
+	aside, .sectiontop, .profile_side {
 		background:#FFF;
-		border-right:2px solid #dcdee3;
-		border-bottom:2px solid #dcdee3;
-		border-left:1px solid #dcdee3;
-		border-top:1px solid #dcdee3;
-		padding:15px;
-	}
-	
-	.wall-item-item {
 		border-right:2px solid #dcdee3;
 		border-bottom:2px solid #dcdee3;
 		border-left:1px solid #dcdee3;
@@ -31,19 +33,30 @@
 		background:#FFF;
 	}
 
-	aside, section {
+	aside, .sectiontop {
 		background:#FFF;
 		border:1px solid #dcdee3;
 		padding:1px;
 		margin: 0px -30px 0px -30px;
 	}
 	
-	.contact-info span img, .contact-info-xs span img , .shared_content img {
+	section {
+		padding:1px;
+		margin: 0px -30px 0px -30px;
+	}
+	
+	.contact-info span img, .contact-info-xs span img, .shared_content img{
+		max-width:100%;
 		width:100%;
 	}
 	.shared_header img {
 		max-width:32px;
 		max-height:32px;
+	}
+	
+	.panel-default {
+		margin-left:-30px;
+		margin-right:-30px;
 	}
 }
 
@@ -146,17 +159,17 @@
 	padding-left:5px;
 	border-left:4px #D8D7CF solid;
 }
-.wall-item-item	.contact-photo {
+.contact-photo {
 	padding:0px 20px 20px 0px;
 	float:left;
 }
 
-.wall-item-item	.contact-photo-xs {
+.contact-photo-xs {
 	padding:0px 5px 5px 0px;
 	float:left;
 }
 
-.wall-item-item	.contact-photo img {
+.contact-photo img {
 	width:100%;
 	height:100%;
 	min-width:80px;
@@ -165,7 +178,7 @@
 	max-height:80px;
 }
 
-.wall-item-item	.contact-photo-xs img {
+.contact-photo-xs img {
 	width:100%;
 	height:100%;
 	min-width:40px;
@@ -174,13 +187,15 @@
 	max-height:40px;
 }
 
-.wall-item-item	.contact-info, .wall-item-item .contact-info-xs {
+.contact-info, .contact-info-xs {
 	overflow:hidden;
 }
-.wall-item-item	.contact-info	.item-add-comment {
+
+.contact-info .item-add-comment {
 	border-top:#FFF 1px solid;
 	padding:7px 12px 7px 12px;
 }
+
 .my-comment-photo{
 	width:50px;
 	height:50px;
@@ -198,11 +213,15 @@
 .comment-edit-text-empty,
 .comment-edit-text-full {
 	overflow:hidden;
-	width:90%;
-	max-width:1050px;
+	width:94.6%;
+	max-width:94.6%;
 	height:50px;
 	min-height:50px;
 	max-height:500px;
+}
+
+.comment-edit-form {
+	width:100%;
 }
 /* ./Wall item */
 
@@ -218,7 +237,7 @@
 
 .attachment-image {
 	margin-left: auto;
-		margin-right: auto;
+	margin-right: auto;
 	width:100%;
 	border:1px #333 solid;
 	margin-bottom:15px;
@@ -350,4 +369,175 @@ span.rollover:hover {
 		float:none;
 		color:#FFF;
 	}
+}
+
+#nav-notifications-menu{
+	left: -95px;
+	margin-top:-1px;
+	border:1px solid #454545;
+	-moz-box-shadow: 10px 10px 20px -7px #656565;
+	-webkit-box-shadow: 10px 10px 20px -7px #656565;
+	-o-box-shadow: 10px 10px 20px -7px #656565;
+	box-shadow: 10px 10px 20px -7px #656565;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=20);
+}
+
+.panel-default .panel-heading {
+  background-color:#f9fafb;
+  color:#555555;
+}
+
+hr {
+	border-color:#dddddd;
+}
+
+.panel {
+	overflow:hidden;
+}
+
+.wall-item-tags a{
+	text-decoration:none;
+	color:#FFF;
+}
+
+.panel .panel-default {
+	border-top:#e5e6e9 1px solid;
+	border-right:#dfe0e4 2px solid;
+	border-bottom:#d0d1d5 5px solid;
+	border-left:#dfe0e4 1px solid;
+}
+
+.panel blockquote img, .panel img {
+	width:100%;
+}
+
+.shared_header img {
+	min-width:32px;
+	min-height:32px;
+	width:100%;
+	height:100%;
+	max-width:32px;
+	max-height:32px;
+}
+
+#jot, #events-reminder {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+#birthblock {
+	margin-right: 15px;
+    margin-left: 15px;
+}
+
+#birthday-notice {
+	padding-bottom:5px;
+}
+
+#jot-tools {
+	padding-top:10px;
+}
+
+.mceLayout {
+	min-width:200px;
+	width:100%;
+}
+
+#NavAside {
+	padding:10px;
+}
+
+.autocomplete, .acpopup {
+	background:#FFF;
+	border:1px solid #333;
+	margin-top:5px;
+	padding:2px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+
+.autocomplete div:hover, .acpopupitem:hover {
+	background:#E2E2E2;
+	cursor:pointer;
+}
+
+#profile-jot-text, #profile-jot-text_toolbargroup {
+	border-top:0;
+}
+
+#jot-title {
+	border-bottom:0;
+}
+
+#jot-tools {
+	padding-top:0;
+}
+
+.navbar-form img {
+	width:34px;
+	height:34px;
+}
+
+.stack { position: relative; z-index: 10; width:80px; height:80px; }
+ 
+/* Image styles */
+.stack img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+	border: 1px solid #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+	width:80px; height:80px;
+}
+ 
+/* Stacks creted by the use of generated content */
+.stack:before, .stack:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border: 10px solid #fff;
+	left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    -webkit-transition: 0.3s all ease-out;
+    -moz-transition: 0.3s all ease-out;
+    transition: 0.3s all ease-out;
+}
+.stack:before { top: 1px; z-index: -10; } /* 1st element in stack (behind image) */
+.stack:after { top: 2px; z-index: -20; } /* 2nd element in stack (behind image) */
+/* Third stack example (One stack element rotated in the opposite direction) */
+.stack.twisted:before {
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    transform: rotate(4deg);
+	width:80px; height:80px;
+}   
+.stack.twisted:after {
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+	width:80px; height:80px;
+}
+
+/* Reset all rotations on hover */
+.stack:hover:before, .stack:hover:after {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.embed_video img {
+	max-width:160px;
+	max-height:120px;
 }
