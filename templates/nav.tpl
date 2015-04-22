@@ -48,12 +48,16 @@
 			{{if $nav.contacts}}
 				<a id="nav-contacts-link" class="nav-link {{$nav.contacts.2}} navbar-brand" href="{{$nav.contacts.0}}" title="{{$nav.contacts.1}}" ><i class="fa fa-users fa-lg"></i></a>
 			{{/if}}
+		
+			{{if $nav.apps}}
+				<a id="nav-apps-link" class="nav-link {{$nav.apps.2}} navbar-brand" href="{{$nav.apps.0}}" title="{{$nav.apps.3}}" ><i class="fa fa-puzzle-piece fa-lg"></i></a>
+			{{/if}}
 		</div>
 		
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right pull-right hidden-xs">
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cogs fa-lg"></i></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user fa-lg"></i></a>
 					<ul class="dropdown-menu" role="menu">
 						<li role="presentation" class="dropdown-header"><img src="{{$userinfo.icon}}" alt="{{$userinfo.name}}" style="max-width:15px; max-height:15px; min-width:15px; min-height:15px; width:15px; height:15px;"> {{$userinfo.name}}</li>
 						<li class="divider"></li>
@@ -75,6 +79,9 @@
 						<li><a id="nav-manage-link" class="nav-commlink {{$nav.manage.2}} {{$sel.manage}}" href="{{$nav.manage.0}}" title="{{$nav.manage.3}}"><i class="fa fa-flag fa-fw"></i> {{$nav.manage.1}}</a></li>
 						{{/if}}
 						<li class="divider"></li>
+						{{if $nav.help}}
+						<li><a id="nav-help-link" class="nav-link {{$nav.help.2}}" target="friendica-help" href="{{$nav.help.0}}" title="{{$nav.help.3}}" ><i class="fa fa-question-circle fa-fw"></i> {{$nav.help.3}}</a></li>
+						{{/if}}
 						{{if $nav.settings}}
 						<li><a id="nav-settings-link" class="nav-link {{$nav.settings.2}}" href="{{$nav.settings.0}}" title="{{$nav.settings.3}}"><i class="fa fa-cog fa-fw"></i> {{$nav.settings.1}}</a></li>
 						{{/if}}

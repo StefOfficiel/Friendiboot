@@ -77,11 +77,6 @@
 	background-color: #000000;
 }
 
-.smiley {
-	max-width: 16px;
-	max-height: 16px;
-}
-
 .mail-list-outside-wrapper h3 strong {
 	color:#F33;
 }
@@ -409,6 +404,15 @@ hr {
 
 .panel blockquote img, .panel img {
 	width:100%;
+}
+
+.type-link>blockquote>.smiley, .smiley {
+	max-width: 16px;
+	max-height: 16px;
+	width:16px;
+	height:16px;
+	min-width:16px;
+	min-height:16px;
 }
 
 .shared_header img {
