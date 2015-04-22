@@ -65,6 +65,8 @@
 						<li><a class="{{$usermenu.2}}" href="{{$usermenu.0}}" title="{{$usermenu.3}}">{{$usermenu.1}}</a></li>
 					{{/foreach}}
 						<li class="divider"></li>
+						<li><a href="https://github.com/StefOfficiel/Friendiboot" target="new" title="Friendiboot on GitHub"><i class="fa fa-github"></i> Friendiboot on GitHub</a></li>
+						<li class="divider"></li>
 						{{if $nav.notifications}}
 						<li><a href="{{$nav.notifications.0}}" title="{{$nav.notifications.1}}"><i class="fa fa-globe fa-fw"></i> {{$nav.notifications.1}}</a></li>
 						{{/if}}
